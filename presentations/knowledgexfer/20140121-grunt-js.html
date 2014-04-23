@@ -24,6 +24,9 @@
 			.reveal .controls {
 				display: none;
 			}
+      .yellow {
+          color:#FFFF00 !important;
+      }
 		</style>
 
 		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
@@ -327,8 +330,7 @@ module.exports = function(grunt) {
 				<section>
 					<section><h3>Custom Tasks</h3>
 						<div class="fragment">
-							<p>Already seen…</p>
-							<h2>Load</h2>
+							<h2>Already seen… <span class="yellow">Load</span></h2>
 							<pre>
 								<code class="javascript">
   grunt.loadNpmTasks('grunt-contrib-copy');
@@ -338,7 +340,7 @@ module.exports = function(grunt) {
 							</pre>
 						</div>
 						<div class="fragment">
-							<h2>Register</h2>
+							<h2 class="yellow">Register</h2>
 							<pre>
 								<code class="javascript">
   grunt.registerTask('default', ['clean', 'copy', 'build-index']);
@@ -346,7 +348,7 @@ module.exports = function(grunt) {
 								</code>
 							</pre>
 						</div>
-						<h4 class="fragment">copy, gh-pages, clean, default, publish<span class="fragment">, build-index(??)</span></h4>
+						<h4 class="fragment">copy, gh-pages, clean, default, publish<span class="fragment">, <span class="yellow">build-index(??)</span></span></h4>
 					</section>
 				</section>
 
@@ -397,10 +399,10 @@ module.exports = function(grunt) {
 						To add to a project:
 						<pre>
 							<code data-trim>
-								npm install grunt --save-dev
+								npm install grunt --save
 							</code>
 						</pre>
-						<p><q>--save-dev</q> will add grunt to your package.json's <q>dependencies</q> section.</p>
+						<p><q>--save</q> will add grunt to your package.json's <q>dependencies</q> section.</p>
 						<p>E.g. The 100-lines-or-less-builder <a href="https://github.com/ArcGIS/100-lines-or-less-builder/blob/master/package.json">package.json</a></p>
 					</div>
 				</section>
