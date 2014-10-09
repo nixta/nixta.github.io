@@ -57,7 +57,7 @@
 						Drag these to your bookmarks bar:<br/>
 						<a class="btn btn-xs btn-primary" href="javascript:if (typeof arcgisonline !== 'undefined' && arcgisonline.map.main.map !== null) {var m=arcgisonline.map.main.map,c=m.extent.getCenter(); alert('Scale = 1 : '+m.getScale()+'\nZoom Level = '+m.getZoom()+'\nCenter = '+c.x+', '+c.y+'\nLat,Lon = '+c.getLatitude()+', '+c.getLongitude());} else {alert('Use this bookmark while viewing a map at ArcGIS.com!');}">Get Map Info</a>
 
-						<a class="btn btn-xs btn-primary" href="javascript:var a = document.cookie.split('; '), b=-1;for(var c=0;c<a.length;c++) { if (a[c].indexOf('esri_auth') === 0) { b=c; break; } }; if (b===-1) {alert('Could not find esri_auth cookie!');} else { b=JSON.parse(window.decodeURIComponent(a[b].split('=')[1]));b.token!==undefined?alert('Token found: ' + b.token):alert('No token found in esri_auth'); }">Get Token</a>
+						<a class="btn btn-xs btn-primary" href="javascript:var a = document.cookie.split('; '), b=-1;for(var c=0;c<a.length;c++) { if (a[c].indexOf('esri_auth') === 0) { b=c; break; } }; if (b===-1) {alert('Could not find esri_auth cookie!');} else { b=JSON.parse(window.decodeURIComponent(a[b].split('=')[1]));b.token!==undefined?alert('Token found:\n' + b.token):alert('No token found in esri_auth'); }">Get Token</a>
 				</div>
 				<div class="col-sm-2 col-xs-1"></div>
 			</div>
