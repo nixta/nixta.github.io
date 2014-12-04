@@ -55,9 +55,11 @@
 				<div class="well col-sm-8 col-xs-10" style="text-align:center">
 					<h3>Bookmarklets</h3>
 						Drag these to your bookmarks bar:<br/>
-						<a class="btn btn-xs btn-primary" href="javascript:if (typeof arcgisonline !== 'undefined' && arcgisonline.map.main.map !== null) {var m=arcgisonline.map.main.map,c=m.extent.getCenter(); alert('Scale = 1 : '+m.getScale()+'\nZoom Level = '+m.getZoom()+'\nCenter = '+c.x+', '+c.y+'\nLat,Lon = '+c.getLatitude()+', '+c.getLongitude());} else {alert('Use this bookmark while viewing a map at ArcGIS.com!');}">Get Map Info</a>
+						<a class="btn btn-xs btn-primary" href="javascript:void%20function(){if(%22undefined%22!=typeof%20arcgisonline%26%26null!==arcgisonline.map.main.map){var%20e=arcgisonline.map.main.map,n=e.extent.getCenter();alert(%22Scale%20=%201%20:%20%22+e.getScale()+%22\nZoom%20Level%20=%20%22+e.getZoom()+%22\nCenter%20=%20%22+n.x+%22,%20%22+n.y+%22\nLat,Lon%20=%20%22+n.getLatitude()+%22,%20%22+n.getLongitude())}else%20alert(%22Use%20this%20bookmark%20while%20viewing%20a%20map%20at%20ArcGIS.com!%22)}();">Get Map Info</a>
 
-						<a class="btn btn-xs btn-primary" href="javascript:var a = document.cookie.split('; '), b=-1;for(var c=0;c<a.length;c++) { if (a[c].indexOf('esri_auth') === 0) { b=c; break; } }; if (b===-1) {alert('Could not find esri_auth cookie!');} else { b=JSON.parse(window.decodeURIComponent(a[b].split('=')[1]));b.token!==undefined?alert('Token found:\n' + b.token):alert('No token found in esri_auth'); }">Get Token</a>
+						<a class="btn btn-xs btn-primary" href="javascript:void%20function(){for(var%20o=document.cookie.split(%22;%20%22),e=-1,n=0;n%3Co.length;n++)if(0===o[n].indexOf(%22esri_auth%22)){e=n;break}-1===e%3Falert(%22Could%20not%20find%20esri_auth%20cookie!%22):(e=JSON.parse(window.decodeURIComponent(o[e].split(%22=%22)[1])),void%200!==e.token%3F(alert(%22Token%20found:\n%22+e.token),console.log(e.token)):alert(%22No%20token%20found%20in%20esri_auth%22))}();">Get Token</a>
+
+						<br/><br/>Also check out the amazing <a href='http://chriszarate.github.io/bookmarkleter/' target='_blank'>Bookmarkleter</a>, and my <a target='_blank' href='https://geonet.esri.com/groups/geodev/blog/2014/10/08/using-bookmarklets-with-arcgis-online'>blog post on GeoNet</a>
 				</div>
 				<div class="col-sm-2 col-xs-1"></div>
 			</div>
