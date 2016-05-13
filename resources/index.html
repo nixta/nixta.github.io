@@ -14,7 +14,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 		<style type="text/css">
 		div.row a.btn {
 		    margin-top: 5px; /* define margin as you see fit */
@@ -52,7 +52,7 @@
 					<a class="btn btn-md btn-primary" href="https://nyc3d-portal-ms.esri.com/NYCAirRights/">NYC Building Air Rights</a>
 					<a class="btn btn-md btn-primary" href="http://maps.esri.com/rc/cambridge/index.html">Cambridge 3D Map</a>
 					<a class="btn btn-md btn-primary" href="http://esri.github.io/wind-js/">Wind JS</a>
-					<a class="btn btn-md btn-primary" href="https://pure-dawn-16123.herokuapp.com/">ArcGIS Fly</a>
+					<a class="btn btn-md btn-primary" href="https://pure-dawn-16123.herokuapp.com/" data-toggle="tooltip" title="Open in laptop and on phone, pair phone with code from laptop">ArcGIS Fly</a>
 					<a class="btn btn-md btn-primary" href="http://geeknixta.maps.arcgis.com/home/webmap/viewer.html?webmap=36f86911f8504f3a94cbe1e489e76723">CLVisit "Heatmap" Styling</a>
 					<a class="btn btn-md btn-primary" href="http://placemeter-arcgisdemo.s3-website-us-east-1.amazonaws.com/">Placemeter - Union Square</a>
 					<a class="btn btn-md btn-primary" href="http://www.arcgis.com/apps/CEWebViewer/viewer.html?3dWebScene=86f88285788a4c53bd3d5dde6b315dfe">Philly CityEngine</a>
@@ -67,8 +67,8 @@
 					<a class="btn btn-md btn-primary" href="https://scenesampleserverdev.arcgis.com/arcgis/rest/services/Hosted">Scene Services</a>
 					<a class="btn btn-md btn-primary" href="http://www.arcgis.com/home/item.html?id=fad90a1b2f5243f99c2d49aa6719bfd7">San Diego Scene Service</a>
 					<a class="btn btn-md btn-primary" href="http://www.esri.com/products/drone2map">Drone2Map</a>
-					<a class="btn btn-md btn-primary" href="https://bao.arcgis.com/esriBAO/index.html">BAO (requires BAO added to your org login)</a>
-					<a class="btn btn-md btn-primary" href="http://www.esri.com/landing-pages/tapestry">Tapestry (inc zip search)</a>
+					<a class="btn btn-md btn-primary" href="https://bao.arcgis.com/esriBAO/index.html" data-toggle="tooltip" title="Requires BAO added to your org login">BAO</a>
+					<a class="btn btn-md btn-primary" href="http://www.esri.com/landing-pages/tapestry" data-toggle="tooltip" title="Includes ZIP search">Tapestry</a>
 					<a class="btn btn-md btn-primary" href="http://doc.arcgis.com/en/esri-demographics/data/tapestry-segmentation.htm">Tapestry Segmentation</a>
 					<a class="btn btn-md btn-primary" href="http://downloads.esri.com/esri_content_doc/dbl/us/J9941Tapestry_Segmentation_Methodology.pdf">Tapestry Methodology</a>
 				</div>
@@ -86,5 +86,11 @@
 		</div>
 	</body>
 	<!-- Latest compiled and minified JavaScript -->
-	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script>
+		$(document).ready(function(){
+		    $('[data-toggle="tooltip"]').tooltip(); 
+		});
+	</script>
 </html>
