@@ -2,6 +2,8 @@
 
 Feel free to use these as inpiration for your hacks this weekend!
 
+Building around one of these ideas doesn't make you any more or less likely to win our prize, but hopefully inspires you to build something interesting and powerful :)
+
 # Flu Shot Finder
 ## Problem:
 Finding the nearest flu shot provider can be difficult. Flu shots are an important precaution to promote a healthy community. Provider locations should be accessible and easily discoverable yet there are no centralized or third-party resources for this information. You can help by leveraging Esri to curate a database of locations and expose them through a user-friendly dashboard.
