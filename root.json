@@ -1,0 +1,35 @@
+{
+  "version": 8,
+  "sprite": "https://tiles.arcgis.com/tiles/8cv2FuXuWSfF0nbL/arcgis/rest/services/212testStateSubset213/VectorTileServer/resources/sprites/sprite",
+  "glyphs": "https://tiles.arcgis.com/tiles/8cv2FuXuWSfF0nbL/arcgis/rest/services/212testStateSubset213/VectorTileServer/resources/fonts/{fontstack}/{range}.pbf",
+  "sources": {
+    "esri": {
+      "type": "vector",
+      "tiles": [
+        "https://tiles.arcgis.com/tiles/8cv2FuXuWSfF0nbL/arcgis/rest/services/212testStateSubset213/VectorTileServer/tile/{z}/{y}/{x}.pbf"
+      ]
+    }
+  },
+  "layers": [
+    {
+      "id": "GEO2016_STATE_04000_PY/0",
+      "type": "line",
+      "source": "esri",
+      "source-layer": "GEO2016_STATE_04000_PY",
+      "layout": { "line-cap": "round", "line-join": "round" },
+      "paint": {
+        "line-color": "rgba(255,0,0,0.25)",
+        "line-width": {
+          "stops": [
+            [0, 1.33333],
+            [5, 1.33333],
+            [6, 2.66667],
+            [9, 2.66667],
+            [10, 5.33333],
+            [18, 5.33333]
+          ]
+        }
+      }
+    }
+  ]
+}
