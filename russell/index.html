@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no" />
+    <title>CoordinateConversion widget - 4.11</title>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.11/esri/themes/light/main.css" />
+    <style>
+        html,
+        body,
+        #viewDiv {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .esri-search {
+            width: 600px;
+            height: 120px;
+        }
+
+        .esri-input[type="text"] {
+            font-size: 50px;
+            height: 70px;
+        }
+    </style>
+    <script src="https://js.arcgis.com/4.11/"></script>
+    <script>
+        var ccWidget;
+        require([
+            "esri/views/MapView",
+            "esri/widgets/CoordinateConversion",
+            "esri/Map",
+            "esri/WebMap",
+            "esri/widgets/BasemapGallery",
+            "esri/widgets/Search",
+            "esri/widgets/Search/SearchSource",
+            "esri/geometry/geometryEngine",
+            "esri/geometry/Point",
+            "esri/geometry/coordinateFormatter",
+            "esri/geometry/SpatialReference",
+            "esri/Graphic"
+        ], function (MapView, CoordinateConversion, Map, WebMap, BasemapGallery,
+            Search,
+            SearchSource,
+            geometryEngine,
+            Point,
+            coordinateFormatter,
+            SpatialReference,
+            Graphic
+        ) {
+
+                var webMap = new WebMap({
+                    portalItem: {
+                        id: "915580cf37a049cfa08a7723c333de2d"
+                    }
+                });
+
+                var map = new Map({
+                    basemap: "hybrid"
+                });
+
+                var view = new MapView({
+                    container: "viewDiv",
+                    map: map,
+                    center: [44.3661, 33.3152],
+                    zoom: 12
+                });
+
+                var basemapGallery = new BasemapGallery({
+                    view: view
+                });
+
+                ccWidget = new CoordinateConversion({
+                    view: view
+                });
+
+
+
+                var customSearchSource = new SearchSource({
+                    name: "MGRS Address Search",
+                    placeholder: "38 SMC 31397 45826",
+                    displayField: "name",
+                    // Provide a getResults method to find
+                    // results from the suggestions
+                    getResults: function (params) {
+                        // If the Search widget passes the current location,
+                        // you can use this in your own custom source
+                        var operation = params.location ? "reverse/" : "search/";
+                        var query = {};
+                        // You can perform a different query if a location
+                        // is provided
+
+                        return coordinateFormatter.load().then(function () {
+                            var mgrs = params.suggestResult.text;
+                            var point = coordinateFormatter.fromMgrs(mgrs, SpatialReference.WGS84, "automatic");
+                            var pointStr = coordinateFormatter.toLatitudeLongitude(point, "dd", 6);
+                            var graphic = new Graphic({
+                                    geometry: point,
+                                    attributes: { 
+                                        "Military Grid" : mgrs,
+                                        "GPS Coordinate" : pointStr
+                                    }
+                                });
+                                // Optionally, you can provide an extent for
+                                // a point result, so the view can zoom to it
+                                var buffer = geometryEngine.geodesicBuffer(
+                                    graphic.geometry,
+                                    2000,
+                                    "meters"
+                                );
+                                // Return a Search Result
+                                var searchResult = {
+                                    extent: buffer.extent,
+                                    feature: graphic,
+                                    name: `${mgrs} ( ${pointStr} )`
+                                };
+                            return [searchResult];
+                        });
+                    }
+                });
+
+                // Create Search widget using custom SearchSource
+                var searchWidget = new Search({
+                    view: view,
+                    sources: [customSearchSource],
+                    includeDefaultSources: false
+                });
+
+                view.ui.add(searchWidget, "top-right");
+                // view.ui.add(basemapGallery, "top-right");
+                view.ui.add(ccWidget, "top-right");
+
+            });
+    </script>
+</head>
+
+<body class="calcite">
+    <div id="viewDiv"></div>
+</body>
+
+</html>
