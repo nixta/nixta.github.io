@@ -18,7 +18,7 @@
         }
 
         .esri-search {
-            width: 800px;
+            width: 650px;
             height: 120px;
         }
 
@@ -34,7 +34,6 @@
             "esri/views/MapView",
             "esri/widgets/CoordinateConversion",
             "esri/Map",
-            "esri/WebMap",
             "esri/widgets/BasemapGallery",
             "esri/widgets/Search",
             "esri/widgets/Search/SearchSource",
@@ -43,7 +42,7 @@
             "esri/geometry/coordinateFormatter",
             "esri/geometry/SpatialReference",
             "esri/Graphic"
-        ], function (MapView, CoordinateConversion, Map, WebMap, BasemapGallery,
+        ], function (MapView, CoordinateConversion, Map, BasemapGallery,
             Search,
             SearchSource,
             geometryEngine,
@@ -52,12 +51,6 @@
             SpatialReference,
             Graphic
         ) {
-
-                var webMap = new WebMap({
-                    portalItem: {
-                        id: "915580cf37a049cfa08a7723c333de2d"
-                    }
-                });
 
                 var map = new Map({
                     basemap: "hybrid"
