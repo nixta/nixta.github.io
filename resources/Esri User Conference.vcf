@@ -1,0 +1,25 @@
+BEGIN:VCARD
+VERSION:3.0
+PRODID:-//Apple Inc.//Mac OS X 10.14.5//EN
+N:;;;;
+FN:Esri User Conference
+ORG:Esri User Conference;
+item1.EMAIL;type=INTERNET;type=pref:media.help@esri.com
+item1.X-ABLabel:Media
+item2.TEL;type=pref:6195255490
+item2.X-ABLabel:Non Life Threatening
+item3.TEL:x5490
+item3.X-ABLabel:Non Life Threatening
+item4.TEL:6195255911
+item4.X-ABLabel:Life Threatening
+item5.TEL:x5911
+item5.X-ABLabel:Life Threatening
+item6.TEL:9093697700
+item6.X-ABLabel:AV Help
+item7.TEL:9095496530
+item7.X-ABLabel:Setup Help (Alan Kane)
+NOTE:Employee Resource Area: Hall E\nEmployee Checkin: Grand Lobby E\n\nExpo: Halls A-C\nPlenary: Halls F-H\nRegistration: Hall D\n\nParty Wristband Distribution: Grand Lobby E (Wed + Thu)
+X-ABShowAs:COMPANY
+UID:3b8286c2-c790-44e1-b976-dd421f6fa28a
+X-ABUID:D3905A14-3D15-4D4A-9489-80C43FAEB62E:ABPerson
+END:VCARD
