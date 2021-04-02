@@ -3,7 +3,7 @@
         window.toggleFullscreenChat();
         return;
     }
-    const css = '.fullscreen-chat .chat-container {height: 100vh !important; position: fixed; z-index: 9999; width: 100vw; top: 250px; left: 0; margin: 0;} .fullscreen-chat {overflow:hidden;} .dark.str-chat .long {background:darkred !important}';
+    const css = '.fullscreen-chat .chat-container {height: 80vh !important; max-width: 100vh !important; position: fixed; z-index: 9999; width: 100vw; top: 250px; left: 0; margin: 0;} .fullscreen-chat {overflow:hidden;} .fullscreen-chat .team-chat-container {height: 80vh !important}';
     const head = document.head || document.getElementsByTagName('head')[0];
     const style = document.createElement('style');
     head.appendChild(style);
