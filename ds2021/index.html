@@ -1,63 +1,73 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
 
-		<title>Hacks for dev2021.esri.com</title>
+<head>
+	<meta charset="utf-8">
 
-		<meta name="description" content="DevSummit 2021 hacks">
-		<meta name="author" content="Nick Furness">
+	<title>Hacks for dev2021.esri.com</title>
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="description" content="DevSummit 2021 hacks">
+	<meta name="author" content="Nick Furness">
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
-		<style type="text/css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+	<style type="text/css">
 		div.row a.btn {
-		    margin-top: 5px; /* define margin as you see fit */
-		    margin-right: 2px;
-		    margin-left: 2px;
-		    margin-bottom: 6px;
+			margin-top: 5px;
+			/* define margin as you see fit */
+			margin-right: 2px;
+			margin-left: 2px;
+			margin-bottom: 6px;
 		}
+
 		div.row div.well {
 			margin-left: 5px;
 			margin-right: 5px;
 		}
+
 		div.row div.well h3 {
 			margin-top: 0px;
 		}
-		</style>
-	</head>
+	</style>
+</head>
 
-	<body>
-		<div class="container">
-			<br/>
-			<div class="row">
-				<div class="col-sm-2 col-xs-1"></div>
-				<div class="col-sm-8 col-xs-10" style="text-align:center">
-					<h1>DevSummit 2021 hacks</h1><br/>
-				</div>
-				<div class="col-sm-2 col-xs-1"></div>
+<body>
+	<div class="container">
+		<br />
+		<div class="row">
+			<div class="col-sm-2 col-xs-1"></div>
+			<div class="col-sm-8 col-xs-10" style="text-align:center">
+				<h1>DevSummit 2021 hacks</h1><br />
 			</div>
-			<div class="row">
-				<div class="col-sm-2 col-xs-1"></div>
-				<div class="well col-sm-8 col-xs-10" style="text-align:center">
-					<h3>Bookmarklets</h3>
-						Drag to your bookmarks bar:<br/><br/>
-						<a class="btn btn-xs btn-primary" href="javascript:void%20function(){(()=%3E{if(void%200!==window.toggleFullscreenChat)return%20void%20window.toggleFullscreenChat();const%20a=document.head||document.getElementsByTagName(%22head%22)[0],b=document.createElement(%22style%22);a.appendChild(b),b.type=%22text/css%22,b.appendChild(document.createTextNode(%22.fullscreen-chat%20.chat-container%20{height:%20100vh%20!important;%20max-width:%20100vw%20!important;%20position:%20fixed;%20z-index:%209999;%20width:%20100vw;%20top:%200;%20left:%200;%20margin:%200;%20padding:%200%20!important}%20.fullscreen-chat%20{overflow:hidden;}%20.fullscreen-chat%20.team-chat-container%20{height:%20100vh%20!important}%22)),document.body.classList.add(%22fullscreen-chat%22),window.toggleFullscreenChat=()=%3E{document.body.classList.contains(%22fullscreen-chat%22)%3Fdocument.body.classList.remove(%22fullscreen-chat%22):document.body.classList.add(%22fullscreen-chat%22)}})()}();">Toggle Fullscreen Chat</a>
-						This will toggle the Ask the Experts chat to full screen. I forget where I stole the basis of this code from, but I'll keep looking.<!-- and color a message over 280 characters in length bright red.
-Can also show a count now.-->
-<br/><br/>
-<a class="btn btn-xs btn-primary" href="javascript:void%20function(){(()=%3E{var%20a=document.getElementsByClassName(%22str-chat__thread%20%22);if(0%3Ca.length){var%20b=parseInt(a[0].style.maxWidth);b%3F(1e3%3Eb%26%26(b+=100),a[0].style.maxWidth=`${b}px`):a[0].style.maxWidth=%22400px%22}})()}();">Widen Thread</a>
-This will make the thread sidebar wider by 100px (after a certain point it reaches a limit). Refresh the page to reset. Thanks to Eli for this one!
-				</div>
-				<div class="col-sm-2 col-xs-1"></div>
-			</div>
+			<div class="col-sm-2 col-xs-1"></div>
 		</div>
-	</body>
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+		<div class="row">
+			<div class="col-sm-2 col-xs-1"></div>
+			<div class="well col-sm-8 col-xs-10" style="text-align:center">
+				<h3>Bookmarklets</h3>
+				Drag to your bookmarks bar:<br /><br />
+				<a class="btn btn-xs btn-primary"
+					href="javascript:void%20function(){(()=%3E{if(void%200!==window.toggleFullscreenChat)return%20void%20window.toggleFullscreenChat();const%20a=document.head||document.getElementsByTagName(%22head%22)[0],b=document.createElement(%22style%22);a.appendChild(b),b.type=%22text/css%22,b.appendChild(document.createTextNode(%22.fullscreen-chat%20.chat-container%20{height:%20100vh%20!important;%20max-width:%20100vw%20!important;%20position:%20fixed;%20z-index:%209999;%20width:%20100vw;%20top:%200;%20left:%200;%20margin:%200;%20padding:%200%20!important}%20.fullscreen-chat%20{overflow:hidden;}%20.fullscreen-chat%20.team-chat-container%20{height:%20100vh%20!important}%20.fullscreen-chat%20.str-chat__thread%20{max-width:%20700px%20!important}%22)),document.body.classList.add(%22fullscreen-chat%22),window.toggleFullscreenChat=()=%3E{document.body.classList.contains(%22fullscreen-chat%22)%3Fdocument.body.classList.remove(%22fullscreen-chat%22):document.body.classList.add(%22fullscreen-chat%22)}})()}();">Toggle
+					Fullscreen Chat</a>
+				This will toggle the Ask the Experts chat to full screen. I forget where I stole the basis of this code from,
+				but I'll keep looking.
+				<br /><br />
+				<a class="btn btn-xs btn-primary"
+					href="javascript:void%20function(){(()=%3E{var%20a=document.getElementsByClassName(%22str-chat__thread%20%22);if(0%3Ca.length){var%20b=parseInt(a[0].style.maxWidth);b%3F(1e3%3Eb%26%26(b+=100),a[0].style.maxWidth=`${b}px`):a[0].style.maxWidth=%22400px%22}})()}();">Widen
+					Thread</a>
+				This will make the thread sidebar wider by 100px (after a certain point it reaches a limit). Refresh the page to
+				reset. Thanks to Eli for this one!
+			</div>
+			<div class="col-sm-2 col-xs-1"></div>
+		</div>
+	</div>
+</body>
+<!-- Latest compiled and minified JavaScript -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
 </html>
