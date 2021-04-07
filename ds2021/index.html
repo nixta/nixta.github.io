@@ -48,8 +48,11 @@
 					<h3>Bookmarklets</h3>
 						Drag to your bookmarks bar:<br/><br/>
 						<a class="btn btn-xs btn-primary" href="javascript:void%20function(){(()=%3E{if(void%200!==window.toggleFullscreenChat)return%20void%20window.toggleFullscreenChat();const%20a=document.head||document.getElementsByTagName(%22head%22)[0],b=document.createElement(%22style%22);a.appendChild(b),b.type=%22text/css%22,b.appendChild(document.createTextNode(%22.fullscreen-chat%20.chat-container%20{height:%20100vh%20!important;%20max-width:%20100vw%20!important;%20position:%20fixed;%20z-index:%209999;%20width:%20100vw;%20top:%200;%20left:%200;%20margin:%200;%20padding:%200%20!important}%20.fullscreen-chat%20{overflow:hidden;}%20.fullscreen-chat%20.team-chat-container%20{height:%20100vh%20!important}%22)),document.body.classList.add(%22fullscreen-chat%22),window.toggleFullscreenChat=()=%3E{document.body.classList.contains(%22fullscreen-chat%22)%3Fdocument.body.classList.remove(%22fullscreen-chat%22):document.body.classList.add(%22fullscreen-chat%22)}})()}();">Toggle Fullscreen Chat</a>
-						This will toggle the Ask the Experts chat to full screen.<!-- and color a message over 280 characters in length bright red.
+						This will toggle the Ask the Experts chat to full screen. I forget where I stole the basis of this code from, but I'll keep looking.<!-- and color a message over 280 characters in length bright red.
 Can also show a count now.-->
+<br/><br/>
+<a class="btn btn-xs btn-primary" href="javascript:void%20function(){javascript:void%20function(){(()=%3E{var%20a=document.getElementsByClassName(%22str-chat__thread%20%22),b=parseInt(a[0].style.maxWidth);b+=100,a[0].style.maxWidth=`${b}px`})()}()}();">Make thread sidebar wider</a>
+This will make the thread sidebar wider. Refresh the page to reset. Thanks to Eli for this one!
 				</div>
 				<div class="col-sm-2 col-xs-1"></div>
 			</div>
