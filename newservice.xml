@@ -1,0 +1,191 @@
+<Capabilities xmlns="http://www.opengis.net/wmts/1.0" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gml="http://www.opengis.net/gml" xsi:schemaLocation="http://www.opengis.net/wmts/1.0 http://schemas.opengis.net/wmts/1.0/wmtsGetCapabilities_response.xsd" version="1.0.0">
+    <ows:ServiceIdentification>
+        <ows:ServiceType>OGC WMTS</ows:ServiceType>
+        <ows:ServiceTypeVersion>1.0.0</ows:ServiceTypeVersion>
+    </ows:ServiceIdentification>
+    <ows:ServiceProvider>
+        <ows:ServiceContact>
+            <ows:ContactInfo/>
+        </ows:ServiceContact>
+    </ows:ServiceProvider>
+    <ows:OperationsMetadata>
+        <ows:Operation name="GetCapabilities">
+            <ows:DCP>
+                <ows:HTTP>
+                    <ows:Get xlink:href="https://services.datafordeler.dk/DKskaermkort/topo_skaermkort_wmts/1.0.0/Wmts">
+                        <ows:Constraint name="GetEncoding">
+                            <ows:AllowedValues>
+                                <ows:Value>KVP</ows:Value>
+                            </ows:AllowedValues>
+                        </ows:Constraint>
+                    </ows:Get>
+                </ows:HTTP>
+            </ows:DCP>
+        </ows:Operation>
+        <ows:Operation name="GetTile">
+            <ows:DCP>
+                <ows:HTTP>
+                    <ows:Get xlink:href="https://services.datafordeler.dk/DKskaermkort/topo_skaermkort_wmts/1.0.0/Wmts">
+                        <ows:Constraint name="GetEncoding">
+                            <ows:AllowedValues>
+                                <ows:Value>KVP</ows:Value>
+                            </ows:AllowedValues>
+                        </ows:Constraint>
+                    </ows:Get>
+                </ows:HTTP>
+            </ows:DCP>
+        </ows:Operation>
+    </ows:OperationsMetadata>
+    <Contents>
+        <Layer>
+            <ows:Title>topo_skaermkort</ows:Title>
+            <ows:WGS84BoundingBox>
+                <ows:LowerCorner>2.478420 53.015000</ows:LowerCorner>
+                <ows:UpperCorner>17.557800 58.640300</ows:UpperCorner>
+            </ows:WGS84BoundingBox>
+            <ows:Identifier>topo_skaermkort</ows:Identifier>
+            <Style isDefault="true">
+                <ows:Identifier>default</ows:Identifier>
+            </Style>
+            <Format>image/jpeg</Format>
+            <TileMatrixSetLink>
+                <TileMatrixSet>View1</TileMatrixSet>
+            </TileMatrixSetLink>
+            <ResourceURL format="image/jpeg" resourceType="tile" template="https://services.datafordeler.dk/DKskaermkort/topo_skaermkort_wmts/1.0.0/Wmts/topo_skaermkort/default/{TileMatrixSet}/{TileMatrix}/{TileRow}/{TileCol}.jpg"/>
+        </Layer>
+        <TileMatrixSet>
+            <ows:Identifier>View1</ows:Identifier>
+            <ows:BoundingBox crs="urn:ogc:def:crs:EPSG:6.3:25832">
+                <ows:LowerCorner>120000.000000 5900000.000000</ows:LowerCorner>
+                <ows:UpperCorner>1000000.000000 6500000.000000</ows:UpperCorner>
+            </ows:BoundingBox>
+            <ows:SupportedCRS>urn:ogc:def:crs:EPSG:6.3:25832</ows:SupportedCRS>
+            <TileMatrix>
+                <ows:Identifier>0</ows:Identifier>
+                <ScaleDenominator>5851428.57142857182770967484</ScaleDenominator>
+                <TopLeftCorner>120000.000000 6500000.000000</TopLeftCorner>
+                <TileWidth>256</TileWidth>
+                <TileHeight>256</TileHeight>
+                <MatrixWidth>3</MatrixWidth>
+                <MatrixHeight>2</MatrixHeight>
+            </TileMatrix>
+            <TileMatrix>
+                <ows:Identifier>1</ows:Identifier>
+                <ScaleDenominator>2925714.28571428591385483742</ScaleDenominator>
+                <TopLeftCorner>120000.000000 6500000.000000</TopLeftCorner>
+                <TileWidth>256</TileWidth>
+                <TileHeight>256</TileHeight>
+                <MatrixWidth>5</MatrixWidth>
+                <MatrixHeight>3</MatrixHeight>
+            </TileMatrix>
+            <TileMatrix>
+                <ows:Identifier>2</ows:Identifier>
+                <ScaleDenominator>1462857.14285714295692741871</ScaleDenominator>
+                <TopLeftCorner>120000.000000 6500000.000000</TopLeftCorner>
+                <TileWidth>256</TileWidth>
+                <TileHeight>256</TileHeight>
+                <MatrixWidth>9</MatrixWidth>
+                <MatrixHeight>6</MatrixHeight>
+            </TileMatrix>
+            <TileMatrix>
+                <ows:Identifier>3</ows:Identifier>
+                <ScaleDenominator>731428.57142857147846370935</ScaleDenominator>
+                <TopLeftCorner>120000.000000 6500000.000000</TopLeftCorner>
+                <TileWidth>256</TileWidth>
+                <TileHeight>256</TileHeight>
+                <MatrixWidth>17</MatrixWidth>
+                <MatrixHeight>12</MatrixHeight>
+            </TileMatrix>
+            <TileMatrix>
+                <ows:Identifier>4</ows:Identifier>
+                <ScaleDenominator>365714.28571428573923185468</ScaleDenominator>
+                <TopLeftCorner>120000.000000 6500000.000000</TopLeftCorner>
+                <TileWidth>256</TileWidth>
+                <TileHeight>256</TileHeight>
+                <MatrixWidth>34</MatrixWidth>
+                <MatrixHeight>23</MatrixHeight>
+            </TileMatrix>
+            <TileMatrix>
+                <ows:Identifier>5</ows:Identifier>
+                <ScaleDenominator>182857.14285714286961592734</ScaleDenominator>
+                <TopLeftCorner>120000.000000 6500000.000000</TopLeftCorner>
+                <TileWidth>256</TileWidth>
+                <TileHeight>256</TileHeight>
+                <MatrixWidth>68</MatrixWidth>
+                <MatrixHeight>46</MatrixHeight>
+            </TileMatrix>
+            <TileMatrix>
+                <ows:Identifier>6</ows:Identifier>
+                <ScaleDenominator>91428.57142857143480796367</ScaleDenominator>
+                <TopLeftCorner>120000.000000 6500000.000000</TopLeftCorner>
+                <TileWidth>256</TileWidth>
+                <TileHeight>256</TileHeight>
+                <MatrixWidth>135</MatrixWidth>
+                <MatrixHeight>92</MatrixHeight>
+            </TileMatrix>
+            <TileMatrix>
+                <ows:Identifier>7</ows:Identifier>
+                <ScaleDenominator>45714.28571428571740398183</ScaleDenominator>
+                <TopLeftCorner>120000.000000 6500000.000000</TopLeftCorner>
+                <TileWidth>256</TileWidth>
+                <TileHeight>256</TileHeight>
+                <MatrixWidth>269</MatrixWidth>
+                <MatrixHeight>184</MatrixHeight>
+            </TileMatrix>
+            <TileMatrix>
+                <ows:Identifier>8</ows:Identifier>
+                <ScaleDenominator>22857.14285714285870199092</ScaleDenominator>
+                <TopLeftCorner>120000.000000 6500000.000000</TopLeftCorner>
+                <TileWidth>256</TileWidth>
+                <TileHeight>256</TileHeight>
+                <MatrixWidth>538</MatrixWidth>
+                <MatrixHeight>367</MatrixHeight>
+            </TileMatrix>
+            <TileMatrix>
+                <ows:Identifier>9</ows:Identifier>
+                <ScaleDenominator>11428.57142857142935099546</ScaleDenominator>
+                <TopLeftCorner>120000.000000 6500000.000000</TopLeftCorner>
+                <TileWidth>256</TileWidth>
+                <TileHeight>256</TileHeight>
+                <MatrixWidth>1075</MatrixWidth>
+                <MatrixHeight>733</MatrixHeight>
+            </TileMatrix>
+            <TileMatrix>
+                <ows:Identifier>10</ows:Identifier>
+                <ScaleDenominator>5714.28571428571467549773</ScaleDenominator>
+                <TopLeftCorner>120000.000000 6500000.000000</TopLeftCorner>
+                <TileWidth>256</TileWidth>
+                <TileHeight>256</TileHeight>
+                <MatrixWidth>2149</MatrixWidth>
+                <MatrixHeight>1465</MatrixHeight>
+            </TileMatrix>
+            <TileMatrix>
+                <ows:Identifier>11</ows:Identifier>
+                <ScaleDenominator>2857.14285714285733774886</ScaleDenominator>
+                <TopLeftCorner>120000.000000 6500000.000000</TopLeftCorner>
+                <TileWidth>256</TileWidth>
+                <TileHeight>256</TileHeight>
+                <MatrixWidth>4297</MatrixWidth>
+                <MatrixHeight>2930</MatrixHeight>
+            </TileMatrix>
+            <TileMatrix>
+                <ows:Identifier>12</ows:Identifier>
+                <ScaleDenominator>1428.57142857142866887443</ScaleDenominator>
+                <TopLeftCorner>120000.000000 6500000.000000</TopLeftCorner>
+                <TileWidth>256</TileWidth>
+                <TileHeight>256</TileHeight>
+                <MatrixWidth>8594</MatrixWidth>
+                <MatrixHeight>5860</MatrixHeight>
+            </TileMatrix>
+            <TileMatrix>
+                <ows:Identifier>13</ows:Identifier>
+                <ScaleDenominator>714.28571428571433443722</ScaleDenominator>
+                <TopLeftCorner>120000.000000 6500000.000000</TopLeftCorner>
+                <TileWidth>256</TileWidth>
+                <TileHeight>256</TileHeight>
+                <MatrixWidth>17188</MatrixWidth>
+                <MatrixHeight>11719</MatrixHeight>
+            </TileMatrix>
+        </TileMatrixSet>
+    </Contents>
+</Capabilities>
